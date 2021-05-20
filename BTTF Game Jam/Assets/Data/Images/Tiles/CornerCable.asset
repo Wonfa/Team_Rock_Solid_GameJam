@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: CornerCable
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 2132243133672265950, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -8929287963010339107, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -2475104802672167946, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 8450339619080042826, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -9122363704257293123, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 7416930104780709785, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 1266885485216174245, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 2809878953570282684, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 4657292810557749626, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -3226744869222492639, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 3080656200755209246, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 7369971599447542063, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -6860090045131604353, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -52996467389189643, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: 1411976876214231115, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -6860598743150322667, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  - {fileID: -8909504733777888370, guid: 777e5e60b0c149840b800f98737d8033, type: 3}
+  m_MinSpeed: 12
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
