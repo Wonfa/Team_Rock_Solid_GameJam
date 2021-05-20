@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: TeleportationPad
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -195866481770080711, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 2531017049043789661, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -7747670132867331036, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 4057520472774149405, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -1316289595153732446, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -927535509232143853, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -7550038513683214139, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 1049594318817733040, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -719971261202867721, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 4126299504528283355, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 1437413881741659439, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 4767140474896909539, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -1506968895065363021, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -8057618783812417157, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -6991460908068829296, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 8507159803047743223, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 2178870201419804053, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 4007778031038718801, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 4264722947470580851, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -102090667497710312, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 8460331694405760809, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -141377985455594063, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 1647994453463438608, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 2334565585944869418, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 6554271025698536386, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 3146318984376673374, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -6868748703068903292, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 6079214118303802913, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 1605941282366949923, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -4739997054353891668, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 6439578704670478490, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -5655882608148307958, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -7281819265821756386, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 3200107161487337582, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -6541224674789242466, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -2632544881731635402, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -5537086414871852167, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 386895719936614731, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -8599876170939213483, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -8917191149569383067, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: -7111505720136458674, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 7733282842123851330, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  - {fileID: 6846024507937337790, guid: 5cb6030050296244babbefc55fe6bfb9, type: 3}
+  m_MinSpeed: 12
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
