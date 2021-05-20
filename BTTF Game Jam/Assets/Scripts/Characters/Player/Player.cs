@@ -42,7 +42,8 @@ public class Player : Character {
         Position.Set(pad.Get() + new Vector3(0, 0.25f, 0));
         //play time travel animation
         SendMessage("It appears to be working!");
-        SendMessage("I might actually travel forward in time!");
+        SendMessage("I might finally be able to travel through time.");
+        SendMessage("Years of research might finally pay off.");
         Dialogue.Instance.OnComplete = () => {
             redLights.SetActive(true);
             blueLights.SetActive(false);
@@ -51,8 +52,8 @@ public class Player : Character {
             SendMessage("Wait a minute...");
             SendMessage("Why has it gone red!?");
             SendMessage("* Explosion *");
-            SendMessage("What happened? It was going so well..");
-            SendMessage("Alright, lets head back to the garage and see if we can fix it.");
+            SendMessage("What happened? I though it would finally work.");
+            SendMessage("Alright, lets head back to the garage and see if I can fix it.");
             Dialogue.Instance.OnComplete = () => { 
                 Properties.SetText("Head to the garage.");
                 Properties.Explosion = true;
@@ -68,9 +69,9 @@ public class Player : Character {
         SendMessage("...");
         SendMessage("WHAT!?");
         SendMessage("Where am I?");
-        SendMessage("Is.. that.. a.. DINOSAUR???");
+        SendMessage("Is... that... a... DINOSAUR?!");
         SendMessage("I need to get out of here.");
-        SendMessage("Firstly though, I am hungry.");
+        SendMessage("Although, I am pretty hungry, I need to find some food");
         SendMessage("Lets go and collect some berries to eat.");
         Dialogue.Instance.OnComplete = () => { 
             Properties.SetText("Find berries to eat."); 
@@ -82,7 +83,7 @@ public class Player : Character {
     public void DiscoverMissingBatteries() {
         Locked = true;
         SendMessage("... now the batteries are missing.");
-        SendMessage("Everything is going my way today!");
+        SendMessage("Well this is just brilliant...");
         SendMessage("I guess we have to go and search for them.");
         Dialogue.Instance.OnComplete = () => {
             Properties.BatteriesDino.Value = 4;
