@@ -15,9 +15,16 @@ public class BatteryCharger : MonoExtension {
     public void PlaceBattery() {
         Player player = Game.Player;
 
-        if (player.Properties.Batteries.Value > 0) {
-            player.SendMessage("You need to collect the batteries first!");
-            return;
+        if (player.Properties.Explosion) {
+            if (player.Properties.BatteriesDino.Value > 0) {
+                player.SendMessage("You need to find the batteries first!");
+                return;
+            }
+        } else {
+            if (player.Properties.Batteries.Value > 0) {
+                player.SendMessage("You need to collect the batteries first!");
+                return;
+            }
         }
 
         player.Properties.BatteriesPlaced.Value--;

@@ -8,7 +8,7 @@ public class Interactable : MonoExtension {
     private static Lock<GameObject> ICON = new Lock<GameObject>();
 
     [SerializeField]
-    private float interactDistance = 2.5f;
+    private float interactDistance = 1f;
     [SerializeField]
     private Vector3 offset = new Vector3(0, 0.5f, 0);
     

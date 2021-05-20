@@ -23,4 +23,12 @@ public class Position : MonoBehaviour {
     public Vector3 Get() {
         return tf.position;
     }
+
+    public void Left() {
+        tf.localScale = new Vector3(1, tf.localScale.y, tf.localScale.z);
+    }
+
+    public void Right() {
+        tf.localScale = new Vector3(-1, tf.localScale.y, tf.localScale.z);
+    }
 }

@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Blackout : MonoExtension {
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderers;
 
     private void Start() {
-        spriteRenderer = TryGetComponent<SpriteRenderer>();
-        spriteRenderer.sortingOrder = 11;
+        spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers) {
+            spriteRenderer.sortingOrder = 11;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (!collision.CompareTag("Player")) {
             return;
         }
-        spriteRenderer.enabled = false;
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers) {
+            spriteRenderer.enabled = false;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (!collision.CompareTag("Player")) {
             return;
         }
-        spriteRenderer.enabled = true;
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers) {
+            spriteRenderer.enabled = true;
+        }
     }
 }

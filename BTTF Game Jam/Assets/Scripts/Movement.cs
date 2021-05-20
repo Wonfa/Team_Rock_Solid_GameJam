@@ -16,6 +16,7 @@ public class Movement : MonoExtension {
 
         if (player.Locked) {
             body.velocity = move;
+            player.Animation.SetAnimation(AnimationState.IDLE);
             return;
         }
 
@@ -33,6 +34,18 @@ public class Movement : MonoExtension {
 
         if (Input.GetKey(KeyCode.D)) {
             move.x += 1;
+        }
+
+        if (Mathf.Abs(move.x) + Mathf.Abs(move.y) > 0) {
+            player.Animation.SetAnimation(AnimationState.WALK);
+
+            if (move.x > 0) {
+                player.Position.Right();
+            } else {
+                player.Position.Left();
+            }
+        } else {
+            player.Animation.SetAnimation(AnimationState.IDLE);
         }
 
         body.velocity = move.normalized * player.Properties.MovementSpeed;

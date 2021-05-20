@@ -6,9 +6,11 @@ using UnityEngine.UI;
 [System.Serializable]
 public class PlayerProperties {
     [SerializeField]
-    public float MovementSpeed { get; private set; } = 10;
+    private float movementSpeed = 10;
+    public float MovementSpeed { get => movementSpeed; private set { } }
     public ChangeListener<int> Batteries { get; private set; } = new ChangeListener<int>(4);
     public ChangeListener<int> BatteriesPlaced { get; private set; } = new ChangeListener<int>(4);
+    public ChangeListener<int> BatteriesDino { get; private set; } = new ChangeListener<int>(4);
 
     public bool Explosion { get; set; }
 
@@ -35,9 +37,21 @@ public class PlayerProperties {
                 questText.text = "Stand on time travel pad.";
             }
         };
+        BatteriesDino.OnChange += () => questText.text = "Search for " + BatteriesDino.Value.ToString() + " batteries.";
+        BatteriesDino.OnChange += () => {
+            if (BatteriesDino.Value <= 0) {
+                questText.text = string.Empty;
+                BatteriesPlaced.Value = 4;
+            }
+        };
     }
 
-    private void Reset() { 
-        
+    public void SetText(string text) {
+        questText.text = text;
+    }
+
+    private void Reset() {
+        BatteriesPlaced.Value = 0;
+        BatteriesDino.Value = 4;
     }
 }
