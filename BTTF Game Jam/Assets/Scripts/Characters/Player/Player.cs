@@ -20,6 +20,8 @@ public class Player : Character {
     }
 
     [SerializeField]
+    private GameObject garage;
+    [SerializeField]
     private GameObject redLights;
     [SerializeField]
     private GameObject blueLights;
@@ -43,6 +45,7 @@ public class Player : Character {
         Dialogue.Instance.OnComplete = () => {
             redLights.SetActive(true);
             blueLights.SetActive(false);
+            garage.SetActive(false);
             SendMessage("Wait a minute...");
             SendMessage("Why has it gone red!?");
             SendMessage("* Explosion *");
