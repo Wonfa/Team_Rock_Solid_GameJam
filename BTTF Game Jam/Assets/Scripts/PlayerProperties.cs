@@ -11,8 +11,11 @@ public class PlayerProperties {
     public ChangeListener<int> Batteries { get; private set; } = new ChangeListener<int>(4);
     public ChangeListener<int> BatteriesPlaced { get; private set; } = new ChangeListener<int>(4);
     public ChangeListener<int> BatteriesDino { get; private set; } = new ChangeListener<int>(4);
+    public ChangeListener<int> Berries { get; private set; } = new ChangeListener<int>(3);
 
     public bool Explosion { get; set; }
+
+    public bool Finished { get; set; }
 
     public void Init() {
         Setup();
@@ -35,6 +38,9 @@ public class PlayerProperties {
         BatteriesPlaced.OnChange += () => {
             if (BatteriesPlaced.Value <= 0) {
                 questText.text = "Stand on time travel pad.";
+                if (Explosion) {
+                    Game.Player.SecondBatteries();
+                }
             }
         };
         BatteriesDino.OnChange += () => questText.text = "Search for " + BatteriesDino.Value.ToString() + " batteries.";
@@ -42,6 +48,13 @@ public class PlayerProperties {
             if (BatteriesDino.Value <= 0) {
                 questText.text = string.Empty;
                 BatteriesPlaced.Value = 4;
+            }
+        };
+        Berries.OnChange += () => questText.text = "Search for " + Berries.Value.ToString() + " berries.";
+        Berries.OnChange += () => {
+            if (Berries.Value <= 0) {
+                questText.text = "Return to the indoors.";
+                Game.Player.BerryComplete();
             }
         };
     }

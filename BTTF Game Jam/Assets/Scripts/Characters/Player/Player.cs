@@ -23,6 +23,23 @@ public class Player : Character {
         }
     }
 
+    public void PickupBerry() {
+        Properties.Berries.Value--;
+    }
+
+    [SerializeField]
+    private GameObject berryWaypoint;
+    [SerializeField]
+    private GameObject oldPower;
+    [SerializeField]
+    private GameObject newPower;
+
+    public void BerryComplete() {
+        berryWaypoint.SetActive(true);
+        oldPower.SetActive(false);
+        newPower.SetActive(true);
+    }
+
     [SerializeField]
     private GameObject garage;
     [SerializeField]
@@ -32,8 +49,46 @@ public class Player : Character {
     [SerializeField]
     private GameObject blueLights;
 
+    public void TimeTravelPad(Position pad) {
+        if (Properties.Finished) {
+            return;
+        }
+        if (Properties.Explosion) {
+            TimeTravelStageTwo(pad);
+        } else {
+            TimeTravelStageOne(pad);
+        }
+    }
+
+    public void TimeTravelStageTwo(Position pad) {
+        if (Properties.BatteriesPlaced.Value > 0 || Properties.BatteriesDino.Value > 0) {
+            SendMessage("Looks like this device needs power.");
+            return;
+        }
+
+        Locked = true;
+        Position.Set(pad.Get() + new Vector3(0, 0.25f, 0));
+        SendMessage("Lets hope it works this time.");
+        SendMessage("To the present!");
+        Dialogue.Instance.OnComplete = () => {
+            dinoLand.SetActive(false);
+            garage.SetActive(true);
+            endingWaypoint.SetActive(true);
+            Properties.Finished = true;
+            Locked = false;
+            return true;
+        };
+    }
+
+    [SerializeField]
+    private GameObject endingWaypoint;
+
+    public void EndingDialogue() {
+        SendMessage("Ending");
+    }
+
     public void TimeTravelStageOne(Position pad) {
-        if (Properties.BatteriesPlaced.Value > 0 || Properties.Explosion) {
+        if (Properties.BatteriesPlaced.Value > 0) {
             SendMessage("Looks like this device needs power.");
             return;
         }
@@ -80,16 +135,25 @@ public class Player : Character {
         };
     }
 
+    [SerializeField]
+    private GameObject missingBatteries;
+
     public void DiscoverMissingBatteries() {
         Locked = true;
         SendMessage("... now the batteries are missing.");
         SendMessage("Well this is just brilliant...");
         SendMessage("I guess we have to go and search for them.");
         Dialogue.Instance.OnComplete = () => {
+            missingBatteries.SetActive(true);
             Properties.BatteriesDino.Value = 4;
             Locked = false;
             return true;
         };
+    }
+
+    public void SecondBatteries() {
+        redLights.SetActive(false);
+        blueLights.SetActive(true);
     }
 
     public new void SendMessage(string message) {
