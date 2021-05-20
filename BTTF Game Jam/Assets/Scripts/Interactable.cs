@@ -10,7 +10,7 @@ public class Interactable : MonoExtension {
     [SerializeField]
     private float interactDistance = 2.5f;
     [SerializeField]
-    private Vector2 offset = new Vector2(0, 2);
+    private Vector3 offset = new Vector3(0, 0.5f, 0);
     
     [SerializeField]
     private UnityEvent interactEvent;

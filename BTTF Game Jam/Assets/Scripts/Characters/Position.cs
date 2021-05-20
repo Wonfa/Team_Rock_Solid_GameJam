@@ -7,7 +7,7 @@ public class Position : MonoBehaviour {
     private Transform tf;
     public Vector3 StartPosition { get; private set; }
 
-    public Position() {
+    private void Start() {
         tf = transform;
         StartPosition = new Vector2(tf.position.x, tf.position.y);
     }
@@ -16,7 +16,7 @@ public class Position : MonoBehaviour {
         tf.position = new Vector3(x, y, z);
     }
 
-    public Vector2 Get() {
+    public Vector3 Get() {
         return tf.position;
     }
 }
