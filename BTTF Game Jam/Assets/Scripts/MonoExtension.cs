@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class MonoExtension : MonoBehaviour {
+
+    public void Destroy() {
+        Destroy(gameObject);
+    }
+
     protected T TryGetComponent<T>() {
         T obj = GetComponent<T>();
 

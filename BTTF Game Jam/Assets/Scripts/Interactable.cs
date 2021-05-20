@@ -33,14 +33,11 @@ public class Interactable : MonoExtension {
     }
 
     private void Update() {
-        bool check = Vector2.Distance(position.Get(), Game.Player.Position.Get()) >= interactDistance;
-        if (check) {
-            return;
-        }
+        bool check = Vector3.Distance(position.Get(), Game.Player.Position.Get()) <= interactDistance;
 
         icon.SetActive(check);
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (check && Input.GetKeyDown(KeyCode.E)) {
             interactEvent?.Invoke();
         }
     }

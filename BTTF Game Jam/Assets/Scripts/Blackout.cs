@@ -7,6 +7,7 @@ public class Blackout : MonoExtension {
 
     private void Start() {
         spriteRenderer = TryGetComponent<SpriteRenderer>();
+        spriteRenderer.sortingOrder = 11;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

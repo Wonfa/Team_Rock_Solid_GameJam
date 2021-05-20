@@ -14,6 +14,11 @@ public class Movement : MonoExtension {
     public void Update() {
         Vector2 move = new Vector2(0, 0);
 
+        if (player.Locked) {
+            body.velocity = move;
+            return;
+        }
+
         if (Input.GetKey(KeyCode.W)) {
             move.y += 1;
         }

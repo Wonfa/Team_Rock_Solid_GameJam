@@ -7,13 +7,17 @@ public class Position : MonoBehaviour {
     private Transform tf;
     public Vector3 StartPosition { get; private set; }
 
-    private void Start() {
+    private void Awake() {
         tf = transform;
-        StartPosition = new Vector2(tf.position.x, tf.position.y);
+        StartPosition = new Vector3(tf.position.x, tf.position.y, tf.position.z);
     }
 
     public void Set(float x, float y, float z = 0) {
         tf.position = new Vector3(x, y, z);
+    }
+
+    public void Set(Vector3 position) {
+        Set(position.x, position.y, position.z);
     }
 
     public Vector3 Get() {
