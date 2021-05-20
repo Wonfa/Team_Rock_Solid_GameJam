@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: FullBatteryHolder
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -5466700472536850043, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: -7499293088159884901, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: 8741562647844225757, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: -9211117566300905670, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: -5627158766123548064, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: 5746076930398106928, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: 5548801864793133812, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: 6353656036644183382, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: 952144896087329764, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  - {fileID: -5847760044979906572, guid: 3aa43d93ea2bf3441b782985187132be, type: 3}
+  m_MinSpeed: 12
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
