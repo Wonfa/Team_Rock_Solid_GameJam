@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour {
+public class Movement : MonoExtension {
     private Rigidbody2D body;
     private Player player;
 
     private void Start() {
-        body = GetComponent<Rigidbody2D>();
-        player = GetComponent<Player>();
+        body = TryGetComponent<Rigidbody2D>();
+        player = TryGetComponent<Player>();
     }
 
     public void Update() {
