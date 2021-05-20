@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: DiagonalCable
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 4980930559810904390, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 1349507153929837120, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -1809225944753136044, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 1173925291675881893, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -1010755931609043189, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -7806891900173158909, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 7288604899901312425, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 8476032624644786676, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -417968220111757693, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -7897450698652847102, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 1944003505673824253, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -289279039379789307, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 3285690442029362221, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 725873825952102123, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: 3215178254806167481, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -1720144877869646813, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  - {fileID: -1926774758288201223, guid: 083936766944d8d49b4b115e952e17a9, type: 3}
+  m_MinSpeed: 12
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
