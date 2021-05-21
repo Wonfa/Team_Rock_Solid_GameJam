@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f9e1dd0212767449832916c7cc6824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 1
+  interactDistance: 2.5
   offset: {x: 0, y: 0.5, z: 0}
   interactEvent:
     m_PersistentCalls:
