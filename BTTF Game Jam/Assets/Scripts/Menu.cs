@@ -19,4 +19,13 @@ public class Menu : MonoBehaviour {
     public void Quit() {
         Application.Quit();
     }
+
+    private void Update() {
+        if (SceneManager.GetActiveScene().name.Equals(menuScene)) {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            OpenMenuScene();
+        }
+    }
 }
