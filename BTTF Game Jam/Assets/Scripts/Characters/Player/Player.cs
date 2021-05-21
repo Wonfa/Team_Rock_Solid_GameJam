@@ -70,12 +70,14 @@ public class Player : Character {
         Position.Set(pad.Get() + new Vector3(0, 0.25f, 0));
         timeTravelBeam.SetActive(true);
         SendMessage("Lets hope it works this time.");
-        SendMessage("To the present!");
+        SendMessage("Back to the future!");
+        SendMessage("Lets go investigate our success.");
         Dialogue.Instance.OnComplete = () => {
             timeTravelBeam.SetActive(false);
             dinoLand.SetActive(false);
             garage.SetActive(true);
             endingWaypoint.SetActive(true);
+            Properties.SetText("Check the garage.");
             Properties.Finished = true;
             Locked = false;
             return true;
@@ -86,7 +88,13 @@ public class Player : Character {
     private GameObject endingWaypoint;
 
     public void EndingDialogue() {
-        SendMessage("Ending");
+        Locked = true;
+        SendMessage("It worked! Thank goodness for that.");
+        SendMessage("We seem to be safely back at the garage.");
+        Dialogue.Instance.OnComplete = () => {
+
+            return true;
+        };
     }
 
     [SerializeField]
