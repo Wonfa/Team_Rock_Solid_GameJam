@@ -69,9 +69,9 @@ public class Player : Character {
         Locked = true;
         Position.Set(pad.Get() + new Vector3(0, 0.25f, 0));
         timeTravelBeam.SetActive(true);
-        SendMessage("Lets hope it works this time.");
-        SendMessage("Back to the future!");
-        SendMessage("Lets go investigate our success.");
+        SendMessage("I hope it works this time.");
+        SendMessage("Lets go back to the future!");
+        SendMessage("Now I've got to investigate this success.");
         Dialogue.Instance.OnComplete = () => {
             timeTravelBeam.SetActive(false);
             dinoLand.SetActive(false);
@@ -90,7 +90,7 @@ public class Player : Character {
     public void EndingDialogue() {
         Locked = true;
         SendMessage("It worked! Thank goodness for that.");
-        SendMessage("We seem to be safely back at the garage.");
+        SendMessage("I am safely back home.");
         Dialogue.Instance.OnComplete = () => {
 
             return true;
@@ -118,7 +118,7 @@ public class Player : Character {
             dinoLand.SetActive(true);
             garage.SetActive(false);
             SendMessage("Wait a minute...");
-            SendMessage("Why has it gone red!?");
+            SendMessage("Why has it gone red?!");
             SendMessage("* Explosion *");
             SendMessage("What happened? I thought it would finally work.");
             SendMessage("Alright, lets head back to the garage and see if I can fix it.");
@@ -139,6 +139,7 @@ public class Player : Character {
         SendMessage("GREAT SCOTT!");
         SendMessage("Where am I?");
         SendMessage("Is... that... a... DINOSAUR?!");
+        SendMessage("I wasn't meant to go back this far.");
         SendMessage("I need to get out of here.");
         SendMessage("Although, I am pretty hungry, I need to find some food");
         SendMessage("Lets go and collect some berries to eat.");
