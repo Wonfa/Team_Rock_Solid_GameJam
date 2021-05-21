@@ -10,9 +10,11 @@ public class Game : MonoBehaviour {
     }
 
     public static void DeathEnding() {
+        Player.Locked = true;
         Player.SendMessage("Death Ending");
     }
     public static void CompletedEnding() {
+        Player.Locked = true;
         Player.SendMessage("Completed Ending");
     }
 }

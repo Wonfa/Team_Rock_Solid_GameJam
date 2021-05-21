@@ -33,7 +33,7 @@ public class Interactable : MonoExtension {
     }
 
     private void Update() {
-        bool check = Vector3.Distance(position.Get(), Game.Player.Position.Get()) <= interactDistance;
+        bool check = !Game.Player.Locked && Vector3.Distance(position.Get(), Game.Player.Position.Get()) <= interactDistance;
 
         icon.SetActive(check);
 

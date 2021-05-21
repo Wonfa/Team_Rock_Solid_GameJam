@@ -12,7 +12,7 @@ public class PlayerProperties {
     public ChangeListener<int> BatteriesPlaced { get; private set; } = new ChangeListener<int>(4);
     public ChangeListener<int> BatteriesDino { get; private set; } = new ChangeListener<int>(4);
     public ChangeListener<int> Berries { get; private set; } = new ChangeListener<int>(3);
-    public ChangeListener<int> Lives { get; private set; } = new ChangeListener<int>(3);
+    public ChangeListener<int> Lives { get; private set; } = new ChangeListener<int>(5);
 
     public bool Explosion { get; set; }
 
