@@ -92,7 +92,7 @@ public class Player : Character {
         SendMessage("It worked! Thank goodness for that.");
         SendMessage("I am safely back home.");
         Dialogue.Instance.OnComplete = () => {
-
+            Game.CompletedEnding();
             return true;
         };
     }

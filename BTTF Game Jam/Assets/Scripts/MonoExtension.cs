@@ -12,7 +12,7 @@ public abstract class MonoExtension : MonoBehaviour {
         T obj = GetComponent<T>();
 
         if (obj == null) {
-            Debug.LogError(gameObject.name + " does not have a " + typeof(T).ToString() + " component.");
+            Debug.LogWarning(gameObject.name + " does not have a " + typeof(T).ToString() + " component.");
         }
 
         return obj;
@@ -22,7 +22,7 @@ public abstract class MonoExtension : MonoBehaviour {
         GameObject obj = Instantiate(original);
 
         if (obj == null) {
-            Debug.LogError("Failed to create copy of " + original?.name + ".");
+            Debug.LogWarning("Failed to create copy of " + original?.name + ".");
         }
 
         return obj;
@@ -32,7 +32,7 @@ public abstract class MonoExtension : MonoBehaviour {
         T obj = Resources.Load<T>(path);
 
         if (obj == null) {
-            Debug.LogError("Failed to load " + path + " resource.");
+            Debug.LogWarning("Failed to load " + path + " resource.");
         }
 
         return obj;

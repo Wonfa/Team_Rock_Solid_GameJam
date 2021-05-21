@@ -39,16 +39,18 @@ public class Dinosaur : Character {
             Player player = Game.Player;
             player.Position.Set(playerStartPos.x, playerStartPos.y);
             player.Locked = true;
-            if (player.Properties.Lives.Value < 3) {
-                player.SendMessage("Not again!");
-                player.SendMessage("I should be careful, I don't think I can survive much more of that!");
-            } else {
-                player.SendMessage("What happened? I thought I died...");
+            if (player.Properties.Lives.Value > 1) {
+                if (player.Properties.Lives.Value < 5) {
+                    player.SendMessage("Not again!");
+                    player.SendMessage("I should be careful, I don't think I can survive much more of that!");
+                } else {
+                    player.SendMessage("What happened? I thought I died...");
+                }
+                Dialogue.Instance.OnComplete = () => {
+                    player.Locked = false;
+                    return true;
+                };
             }
-            Dialogue.Instance.OnComplete = () => {
-                player.Locked = false;
-                return true;
-            };
             player.Properties.Lives.Value--;
         }
     }
