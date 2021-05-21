@@ -19,6 +19,8 @@ public class Dinosaur : Character
     private float waitTime;
 
     private Vector2 playerPos;
+    public Vector2 playerStartPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +34,20 @@ public class Dinosaur : Character
     {
         playerPos = Game.Player.Position.Get();
 
+        
+
         if ((Vector2.Distance(Position.Get(), playerPos) < chaseRadius) && (Vector2.Distance(Position.StartPosition, Position.Get()) <= 10.0f))
         {
-            Debug.Log("Chasing");
             Chase();
         }
         else
         {
-            Debug.Log("Patrolling");
             Patrol();
+        }
+
+        if (Vector2.Distance(Position.Get(), playerPos) <= 1.0f)
+        {
+            Game.Player.Position.Set(playerStartPos.x, playerStartPos.y);
         }
     }
 
@@ -64,5 +71,15 @@ public class Dinosaur : Character
     void Chase()
     {
         Position.Set(Vector2.MoveTowards(Position.Get(), playerPos, chaseSpeed * Time.deltaTime));
+
+        if (transform.position.x <= playerPos.x)
+        {
+            Position.Right();
+
+        }
+        else if (transform.position.x > playerPos.x)
+        {
+            Position.Left();
+        }
     }
 }
