@@ -25,10 +25,10 @@ public class Position : MonoBehaviour {
     }
 
     public void Left() {
-        tf.localScale = new Vector3(1, tf.localScale.y, tf.localScale.z);
+        tf.localScale = new Vector3(Mathf.Abs(tf.localScale.x), tf.localScale.y, tf.localScale.z);
     }
 
     public void Right() {
-        tf.localScale = new Vector3(-1, tf.localScale.y, tf.localScale.z);
+        tf.localScale = new Vector3(-Mathf.Abs(tf.localScale.x), tf.localScale.y, tf.localScale.z);
     }
 }
