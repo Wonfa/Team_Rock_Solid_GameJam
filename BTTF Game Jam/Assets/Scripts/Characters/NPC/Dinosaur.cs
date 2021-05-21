@@ -43,7 +43,7 @@ public class Dinosaur : Character {
     private void Patrol() {
         Vector2 movePos = Vector2.MoveTowards(transform.position, moveSpot.position, patrolSpeed * Time.deltaTime);
         Position.Set(movePos);
-        Face(movePos.x);
+        Face(moveSpot.position.x);
 
         if (Vector2.Distance(transform.position, moveSpot.position) < 0.2f) {
             if (waitTime <= 0) {
