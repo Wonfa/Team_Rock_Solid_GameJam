@@ -5,10 +5,12 @@ using UnityEngine;
 public class Movement : MonoExtension {
     private Rigidbody2D body;
     private Player player;
+    private bool lastDir;
 
     private void Start() {
         body = TryGetComponent<Rigidbody2D>();
         player = TryGetComponent<Player>();
+        lastDir = false;
     }
 
     public void Update() {
@@ -39,10 +41,18 @@ public class Movement : MonoExtension {
         if (Mathf.Abs(move.x) + Mathf.Abs(move.y) > 0) {
             player.Animation.SetAnimation(AnimationState.WALK);
 
-            if (move.x > 0) {
-                player.Position.Right();
-            } else {
+            if (move.x == 0) {
+                if (lastDir) {
+                    player.Position.Right();
+                } else {
+                    player.Position.Left();
+                }
+            } else if (move.x < 0) {
                 player.Position.Left();
+                lastDir = false;
+            } else {
+                player.Position.Right();
+                lastDir = true;
             }
         } else {
             player.Animation.SetAnimation(AnimationState.IDLE);

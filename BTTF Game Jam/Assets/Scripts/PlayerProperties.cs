@@ -53,7 +53,7 @@ public class PlayerProperties {
         Berries.OnChange += () => questText.text = "Search for " + Berries.Value.ToString() + " berries.";
         Berries.OnChange += () => {
             if (Berries.Value <= 0) {
-                questText.text = "Return to the indoors.";
+                questText.text = "Return indoors.";
                 Game.Player.BerryComplete();
             }
         };
