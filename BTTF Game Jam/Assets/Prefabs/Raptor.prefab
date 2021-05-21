@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6745883313246431202}
   - component: {fileID: 7834351883785280131}
   - component: {fileID: 1933207895013040153}
+  - component: {fileID: 5242877436315209527}
+  - component: {fileID: 8717802280000944179}
   m_Layer: 0
   m_Name: Raptor
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4710609829926655533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.7757025, y: -1.3060672, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,3 +105,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5242877436315209527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710609829926655533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae688e18d9e05c748814f4411ed97256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8717802280000944179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710609829926655533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669c11aa02421834e81b8ed429d28cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolSpeed: 3
+  startWaitTime: 2
+  chaseRadius: 5
+  chaseSpeed: 5
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  moveSpot: {fileID: 0}

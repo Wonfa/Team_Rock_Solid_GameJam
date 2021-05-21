@@ -122,7 +122,7 @@ public class Player : Character {
     public void ExitTimeTravel() {
         Locked = true;
         SendMessage("...");
-        SendMessage("WHAT!?");
+        SendMessage("GREAT SCOTT!");
         SendMessage("Where am I?");
         SendMessage("Is... that... a... DINOSAUR?!");
         SendMessage("I need to get out of here.");
@@ -142,7 +142,7 @@ public class Player : Character {
         Locked = true;
         SendMessage("... now the batteries are missing.");
         SendMessage("Well this is just brilliant...");
-        SendMessage("I guess we have to go and search for them.");
+        SendMessage("I guess I have to go and search for them.");
         Dialogue.Instance.OnComplete = () => {
             missingBatteries.SetActive(true);
             Properties.BatteriesDino.Value = 4;
