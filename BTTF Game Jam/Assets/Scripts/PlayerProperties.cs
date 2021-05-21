@@ -26,6 +26,8 @@ public class PlayerProperties {
 
     [SerializeField]
     private Text questText;
+    [SerializeField]
+    private Text healthText;
 
     private void Setup() {
         Batteries.OnChange += () => questText.text = "Collect " + Batteries.Value.ToString() + " batteries.";
@@ -58,7 +60,13 @@ public class PlayerProperties {
                 Game.Player.BerryComplete();
             }
         };
-        //Lives.OnChange += () => 
+        Lives.OnChange += () => healthText.text = Lives.Value.ToString();
+        Lives.OnChange += () => {
+            if (Lives.Value <= 0) {
+                Game.DeathEnding();
+            }
+        };
+
     }
 
     public void SetText(string text) {
