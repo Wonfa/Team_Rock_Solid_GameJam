@@ -68,9 +68,11 @@ public class Player : Character {
 
         Locked = true;
         Position.Set(pad.Get() + new Vector3(0, 0.25f, 0));
+        timeTravelBeam.SetActive(true);
         SendMessage("Lets hope it works this time.");
         SendMessage("To the present!");
         Dialogue.Instance.OnComplete = () => {
+            timeTravelBeam.SetActive(false);
             dinoLand.SetActive(false);
             garage.SetActive(true);
             endingWaypoint.SetActive(true);
@@ -87,6 +89,9 @@ public class Player : Character {
         SendMessage("Ending");
     }
 
+    [SerializeField]
+    private GameObject timeTravelBeam;
+
     public void TimeTravelStageOne(Position pad) {
         if (Properties.BatteriesPlaced.Value > 0) {
             SendMessage("Looks like this device needs power.");
@@ -95,7 +100,7 @@ public class Player : Character {
 
         Locked = true;
         Position.Set(pad.Get() + new Vector3(0, 0.25f, 0));
-        //play time travel animation
+        timeTravelBeam.SetActive(true);
         SendMessage("It appears to be working!");
         SendMessage("I might finally be able to travel through time.");
         SendMessage("Years of research might finally pay off.");
@@ -107,9 +112,10 @@ public class Player : Character {
             SendMessage("Wait a minute...");
             SendMessage("Why has it gone red!?");
             SendMessage("* Explosion *");
-            SendMessage("What happened? I though it would finally work.");
+            SendMessage("What happened? I thought it would finally work.");
             SendMessage("Alright, lets head back to the garage and see if I can fix it.");
-            Dialogue.Instance.OnComplete = () => { 
+            Dialogue.Instance.OnComplete = () => {
+                timeTravelBeam.SetActive(false);
                 Properties.SetText("Head to the garage.");
                 Properties.Explosion = true;
                 Locked = false; 
