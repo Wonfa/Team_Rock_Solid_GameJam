@@ -8,4 +8,11 @@ public class Game : MonoBehaviour {
     private void Awake() {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
+
+    public static void DeathEnding() {
+        Player.SendMessage("Death Ending");
+    }
+    public static void CompletedEnding() {
+        Player.SendMessage("Completed Ending");
+    }
 }
